@@ -32,6 +32,7 @@ public class HelloTest {
 
         String a = "dev";
         String b = "dev2";
+        String c = "hftest2-dev";
 
     }
 
