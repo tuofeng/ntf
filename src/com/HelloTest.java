@@ -30,6 +30,8 @@ public class HelloTest {
         int temp =0;
         int a2 =2;
 
+        String a = "dev";
+
     }
 
 }
