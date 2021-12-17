@@ -26,6 +26,7 @@ public class HelloTest {
     public static void main(String[] args) {
 
         int a1 = 1;
+        String str = null;
         int a2 =2;
 
     }
