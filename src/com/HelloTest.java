@@ -27,6 +27,7 @@ public class HelloTest {
 
         int a1 = 1;
         String str = null;
+        int temp =0;
         int a2 =2;
 
     }
