@@ -31,6 +31,7 @@ public class HelloTest {
         int a2 =2;
 
         String a = "dev";
+        String b = "dev2";
 
     }
 
