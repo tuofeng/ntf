@@ -1,0 +1,192 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000000, pid=11312, tid=11824
+#
+# JRE version: 6.0_45-b06
+# Java VM: Java HotSpot(TM) Client VM (20.45-b01 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x00000000
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x003da400):  JavaThread "main" [_thread_in_native, id=11824, stack(0x00550000,0x005a0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000
+
+Registers:
+EAX=0x006487d0, EBX=0x5cbd0000, ECX=0x006487d0, EDX=0x00648df0
+ESP=0x0059f82c, EBP=0x0059f830, ESI=0x00000000, EDI=0x00000001
+EIP=0x00000000, EFLAGS=0x00210202
+
+Top of Stack: (sp=0x0059f82c)
+0x0059f82c:   5cbdbd92 0059f870 5ccd203b 5cbd0000
+0x0059f83c:   00000000 00000001 192f6f56 00000001
+0x0059f84c:   0059f890 006304f0 00000001 0059f844
+0x0059f85c:   0059f274 0059f930 5ccd2580 45a3d0a6
+0x0059f86c:   00000000 0059f87c 5ccd20e3 5cbd0000
+0x0059f87c:   0059f89c 77969264 5cbd0000 00000000
+0x0059f88c:   00000001 006304f0 00000001 0062f9e0
+0x0059f89c:   0059f940 77988fa8 5ccd20c5 5cbd0000 
+
+Instructions: (pc=0x00000000)
+0xffffffe0:   
+
+
+Register to memory mapping:
+
+EAX=0x006487d0 is an unknown value
+EBX=0x5cbd0000 is an unknown value
+ECX=0x006487d0 is an unknown value
+EDX=0x00648df0 is an unknown value
+ESP=0x0059f82c is pointing into the stack for thread: 0x003da400
+EBP=0x0059f830 is pointing into the stack for thread: 0x003da400
+ESI=0x00000000 is an unknown value
+EDI=0x00000001 is an unknown value
+
+
+Stack: [0x00550000,0x005a0000],  sp=0x0059f82c,  free space=318k
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.kingdee.autopay.HfPay.posBindDevice([Ljava/lang/String;)I+0
+j  com.kingdee.autopay.HfPay.main([Ljava/lang/String;)V+132
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x02357c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=1012, stack(0x18ca0000,0x18cf0000)]
+  0x02353800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=9012, stack(0x18c10000,0x18c60000)]
+  0x0233fc00 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=3676, stack(0x18980000,0x189d0000)]
+  0x0233e400 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=8060, stack(0x188f0000,0x18940000)]
+  0x0233c800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=9916, stack(0x187f0000,0x18840000)]
+  0x0230c000 JavaThread "Attach Listener" daemon [_thread_blocked, id=8028, stack(0x18710000,0x18760000)]
+  0x02309000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8400, stack(0x18680000,0x186d0000)]
+  0x022fc800 JavaThread "Finalizer" daemon [_thread_blocked, id=9516, stack(0x185f0000,0x18640000)]
+  0x022fb000 JavaThread "Reference Handler" daemon [_thread_blocked, id=9744, stack(0x18560000,0x185b0000)]
+=>0x003da400 JavaThread "main" [_thread_in_native, id=11824, stack(0x00550000,0x005a0000)]
+
+Other Threads:
+  0x022f7000 VMThread [stack: 0x184d0000,0x18520000] [id=11172]
+  0x0235c000 WatcherThread [stack: 0x18d30000,0x18d80000] [id=2196]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 492K [0x043e0000, 0x04930000, 0x09930000)
+  eden space 4416K,  11% used [0x043e0000, 0x0445b188, 0x04830000)
+  from space 512K,   0% used [0x04830000, 0x04830000, 0x048b0000)
+  to   space 512K,   0% used [0x048b0000, 0x048b0000, 0x04930000)
+ tenured generation   total 10944K, used 0K [0x09930000, 0x0a3e0000, 0x143e0000)
+   the space 10944K,   0% used [0x09930000, 0x09930000, 0x09930200, 0x0a3e0000)
+ compacting perm gen  total 12288K, used 2238K [0x143e0000, 0x14fe0000, 0x183e0000)
+   the space 12288K,  18% used [0x143e0000, 0x1460fae0, 0x1460fc00, 0x14fe0000)
+No shared spaces configured.
+
+Code Cache  [0x02360000, 0x023d8000, 0x04360000)
+ total_blobs=137 nmethods=18 adapters=64 free_code_cache=33077760 largest_free_block=0
+
+Dynamic libraries:
+0x00400000 - 0x00425000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\java.exe
+0x77930000 - 0x77ab0000 	C:\Windows\SysWOW64\ntdll.dll
+0x75560000 - 0x75670000 	C:\Windows\syswow64\kernel32.dll
+0x76850000 - 0x76897000 	C:\Windows\syswow64\KERNELBASE.dll
+0x736e0000 - 0x73751000 	C:\Windows\SysWOW64\SYSFER.DLL
+0x76b90000 - 0x76c31000 	C:\Windows\syswow64\ADVAPI32.dll
+0x764c0000 - 0x7656c000 	C:\Windows\syswow64\msvcrt.dll
+0x768a0000 - 0x768b9000 	C:\Windows\SysWOW64\sechost.dll
+0x76f70000 - 0x77060000 	C:\Windows\syswow64\RPCRT4.dll
+0x74fc0000 - 0x75020000 	C:\Windows\syswow64\SspiCli.dll
+0x74fb0000 - 0x74fbc000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x7c340000 - 0x7c396000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\msvcr71.dll
+0x6d8e0000 - 0x6db90000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\client\jvm.dll
+0x753e0000 - 0x754e0000 	C:\Windows\syswow64\USER32.dll
+0x75780000 - 0x75810000 	C:\Windows\syswow64\GDI32.dll
+0x75670000 - 0x7567a000 	C:\Windows\syswow64\LPK.dll
+0x76d30000 - 0x76dcd000 	C:\Windows\syswow64\USP10.dll
+0x73180000 - 0x731b2000 	C:\Windows\system32\WINMM.dll
+0x75720000 - 0x75780000 	C:\Windows\system32\IMM32.DLL
+0x76c40000 - 0x76d0d000 	C:\Windows\syswow64\MSCTF.dll
+0x73130000 - 0x7317c000 	C:\Windows\system32\apphelp.dll
+0x6d890000 - 0x6d89c000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\java.dll
+0x6d430000 - 0x6d459000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\jdwp.dll
+0x6d750000 - 0x6d756000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\npt.dll
+0x6d8d0000 - 0x6d8df000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\zip.dll
+0x6d2b0000 - 0x6d2b7000 	C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\dt_socket.dll
+0x75280000 - 0x752b5000 	C:\Windows\syswow64\WS2_32.dll
+0x75020000 - 0x75026000 	C:\Windows\syswow64\NSI.dll
+0x72b20000 - 0x72b5c000 	C:\Windows\system32\mswsock.dll
+0x72740000 - 0x72745000 	C:\Windows\System32\wshtcpip.dll
+0x18880000 - 0x188ab000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\autoPay.dll
+0x782e0000 - 0x7852b000 	C:\Windows\WinSxS\x86_microsoft.vc80.debugmfc_1fc8b3b9a1e18e3b_8.0.50727.42_none_f455012451df8b23\MFC80UD.DLL
+0x18d80000 - 0x18ea0000 	C:\Windows\WinSxS\x86_microsoft.vc80.debugcrt_1fc8b3b9a1e18e3b_8.0.50727.42_none_ef74ff32550b5bf0\MSVCR80D.dll
+0x76a50000 - 0x76aa7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x75680000 - 0x75711000 	C:\Windows\syswow64\OLEAUT32.dll
+0x768f0000 - 0x76a4f000 	C:\Windows\syswow64\ole32.dll
+0x5cbd0000 - 0x5cd94000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\PortComm.dll
+0x73250000 - 0x73255000 	C:\Windows\system32\MSIMG32.dll
+0x754e0000 - 0x7555b000 	C:\Windows\syswow64\COMDLG32.dll
+0x727b0000 - 0x7294e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x75870000 - 0x764bc000 	C:\Windows\syswow64\SHELL32.dll
+0x72de0000 - 0x72e31000 	C:\Windows\system32\WINSPOOL.DRV
+0x66470000 - 0x664c3000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\libcurl.dll
+0x75820000 - 0x75865000 	C:\Windows\syswow64\WLDAP32.dll
+0x652c0000 - 0x6541a000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\LIBEAY32.dll
+0x76570000 - 0x76692000 	C:\Windows\syswow64\CRYPT32.dll
+0x76b50000 - 0x76b5c000 	C:\Windows\syswow64\MSASN1.dll
+0x646c0000 - 0x64796000 	C:\Windows\system32\MSVCR110.dll
+0x6fdd0000 - 0x6fe17000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\SSLEAY32.dll
+0x18eb0000 - 0x18ede000 	C:\Program Files (x86)\Java\jdk1.6.0_45\bin\libssh2.dll
+0x73f50000 - 0x7403e000 	C:\Windows\system32\MSVCR120.dll
+0x733e0000 - 0x733f1000 	C:\Windows\system32\NETAPI32.dll
+0x733d0000 - 0x733d9000 	C:\Windows\system32\netutils.dll
+0x733b0000 - 0x733c9000 	C:\Windows\system32\srvcli.dll
+0x733a0000 - 0x733af000 	C:\Windows\system32\wkscli.dll
+0x72c00000 - 0x72d92000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24356_none_5c07bd39a00d5ba6\gdiplus.dll
+0x72da0000 - 0x72ddc000 	C:\Windows\system32\OLEACC.dll
+0x667b0000 - 0x667ba000 	C:\Windows\WinSxS\x86_microsoft.vc80.mfcloc_1fc8b3b9a1e18e3b_8.0.50727.4027_none_03c6f934205fcb15\MFC80CHS.DLL
+0x72760000 - 0x727a4000 	C:\Windows\system32\DNSAPI.dll
+0x73350000 - 0x7336c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73340000 - 0x73347000 	C:\Windows\system32\WINNSI.DLL
+0x726f0000 - 0x72728000 	C:\Windows\System32\fwpuclnt.dll
+0x72730000 - 0x72736000 	C:\Windows\system32\rasadhlp.dll
+0x72a70000 - 0x72a76000 	C:\Windows\System32\wship6.dll
+0x736b0000 - 0x736c7000 	C:\Windows\system32\CRYPTSP.dll
+0x73670000 - 0x736ab000 	C:\Windows\system32\rsaenh.dll
+0x75810000 - 0x75815000 	C:\Windows\system32\PSAPI.DLL
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:49954,suspend=y,server=n -Dfile.encoding=UTF-8 
+java_command: com.kingdee.autopay.HfPay
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_151
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Program Files\Java\jdk1.8.0_151\jre\bin;D:\work\workspace\maven\apache-maven-3.5.0\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Sybase\PowerDesigner 15;D:\work\workspace\wx\lib\lib\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;D:\work\workspace\wx\lib\lib\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Users\rd_lsf_li\AppData\Roaming\npm;C:\Program Files\nodejs\node_global;C:\Program Files\nodejs\;C:\OpenSSL-Win64\bin;E:\Apache24\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files (x86)\Tesseract-OCR;C:\Users\rd_lsf_li\AppData\Roaming\npm;C:\Users\rd_lsf_li\AppData\Local\Programs\Fiddler
+USERNAME=RD_lsf_li
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt
+
+Memory: 4k page, physical 8248096k(2474908k free), swap 16494288k(7664384k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.45-b01) for windows-x86 JRE (1.6.0_45-b06), built on Mar 26 2013 13:40:03 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Tue Mar 12 09:15:41 2019
+elapsed time: 1 seconds
+
